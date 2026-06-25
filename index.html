@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predictor de Arriendos IA</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="card-header">
+      <h1><span class="icon">🏠</span> Predictor de Arriendos IA</h1>
+      <p>Estima el valor de arriendo de tu inmueble con inteligencia artificial, basado en datos reales del mercado.</p>
+    </div>
+
+    <div class="form-panel">
+      <p class="panel-title">formulario</p>
+      <div class="form-grid">
+        <div class="field">
+          <label for="area">Área:</label>
+          <input type="number" id="area" value="0" min="0">
+        </div>
+        <div class="field">
+          <label for="habitaciones">Habitaciones:</label>
+          <input type="number" id="habitaciones" value="0" min="0">
+        </div>
+        <div class="field">
+          <label for="banos">Baños:</label>
+          <input type="number" id="banos" value="0" min="0">
+        </div>
+        <div class="field">
+          <label for="parqueaderos">Parqueaderos:</label>
+          <input type="number" id="parqueaderos" value="0" min="0">
+        </div>
+        <div class="field">
+          <label for="estrato">Estrato:</label>
+          <select id="estrato">
+            <option selected>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="barrio">Barrio:</label>
+          <select id="barrio">
+            <option selected>Laureles</option>
+            <option>El Poblado</option>
+            <option>Belén</option>
+            <option>Envigado</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-predict" type="button">Predecir precio</button>
+    </div>
+
+    <div class="result-panel">
+      <p class="panel-title">resultado</p>
+      <p class="result-label">Precio estimado</p>
+      <p class="result-price">$0 COP</p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
