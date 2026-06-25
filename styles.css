@@ -1,0 +1,189 @@
+:root{
+  --glass-bg: rgba(30, 41, 59, 0.45);
+  --glass-bg-light: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --text-light: #f5f7fa;
+  --text-muted: rgba(245, 247, 250, 0.7);
+  --accent-blue: #2563eb;
+  --accent-blue-dark: #1d4ed8;
+  --input-bg: rgba(15, 23, 42, 0.45);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background:
+    linear-gradient(180deg, rgba(10,15,30,0.55) 0%, rgba(10,15,30,0.75) 100%),
+    url('https://images.unsplash.com/photo-1610016302534-6f67f1c968d8?auto=format&fit=crop&w=1600&q=80')
+    center / cover no-repeat fixed;
+}
+
+/* ===== Tarjeta principal (glassmorphism) ===== */
+.card{
+  width: 100%;
+  max-width: 420px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 28px 26px 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+  color: var(--text-light);
+}
+
+/* ===== Encabezado ===== */
+.card-header{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-header h1{
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-header h1 .icon{
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-blue);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.card-header p{
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+
+/* ===== Panel del formulario ===== */
+.form-panel{
+  background: var(--glass-bg-light);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 16px 16px 18px;
+  margin-bottom: 14px;
+}
+
+.form-panel .panel-title{
+  text-align: center;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 14px;
+}
+
+.form-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+}
+
+.field label{
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.field input,
+.field select{
+  width: 100%;
+  padding: 9px 10px;
+  background: var(--input-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.field input:focus,
+.field select:focus{
+  border-color: var(--accent-blue);
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.field select{
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' stroke='%23cbd5e1' stroke-width='1.5' fill='none' fill-rule='evenodd'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+
+.field select option{
+  background: #1e293b;
+  color: var(--text-light);
+}
+
+/* ===== Botón ===== */
+.btn-predict{
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(180deg, var(--accent-blue) 0%, var(--accent-blue-dark) 100%);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn-predict:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.5);
+}
+
+.btn-predict:active{
+  transform: translateY(0);
+}
+
+/* ===== Panel de resultado ===== */
+.result-panel{
+  background: rgba(241, 245, 249, 0.92);
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  color: #0f172a;
+}
+
+.result-panel .panel-title{
+  color: #64748b;
+}
+
+.result-panel .result-label{
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.result-panel .result-price{
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent-blue-dark);
+}
