@@ -3,55 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Predictor de arriendos para el Valle de Aburrá - Estima el valor de arriendo de tu inmueble con datos reales del mercado.">
-<title>Predictor de Arriendos | Valle de Aburrá</title>
+<meta name="description" content="Estima el valor de arriendo de tu inmueble en el Valle de Aburrá con datos reales del mercado inmobiliario.">
+<title>Predictor de Arriendos · Valle de Aburrá</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="app-container">
+  <!-- Decorative background -->
+  <div class="bg-decoration">
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+    <div class="bg-grid"></div>
+  </div>
 
-    <!-- Header -->
-    <header class="app-header">
-      <div class="header-content">
-        <div class="logo">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 9.5L12 3L21 9.5V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <path d="M9 21V13H15V21" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-          </svg>
-          <span>Predictor de Arriendos</span>
+  <div class="app">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <div class="brand">
+          <div class="brand__icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9.5L12 3L21 9.5V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V9.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 21V13H15V21" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brand__text">
+            <span class="brand__name">Predictor</span>
+            <span class="brand__tag">Valle de Aburrá</span>
+          </div>
         </div>
-        <p class="header-subtitle">Estimación inteligente basada en datos del mercado inmobiliario del Valle de Aburrá</p>
+        <div class="navbar__badge">
+          <span class="pulse-dot"></span>
+          Datos 2024-2025
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero__content">
+        <span class="hero__pill">Herramienta de estimación inmobiliaria</span>
+        <h1 class="hero__title">¿Cuánto deberías arrendar tu inmueble?</h1>
+        <p class="hero__desc">Estimación instantánea basada en datos del mercado del <strong>Valle de Aburrá</strong> — Medellín y municipios del área metropolitana.</p>
       </div>
     </header>
 
-    <!-- Main content -->
-    <main class="main-content">
+    <!-- Main -->
+    <main class="main">
 
-      <!-- Form Panel -->
-      <section class="panel form-panel" aria-label="Formulario de predicción">
-        <div class="panel-header">
-          <h2 class="panel-title">Características del inmueble</h2>
-          <p class="panel-desc">Ingresa los datos de tu propiedad para obtener una estimación de arriendo.</p>
+      <!-- Form -->
+      <section class="panel panel--form">
+        <div class="panel__head">
+          <h2 class="panel__title">Características del inmueble</h2>
+          <p class="panel__sub">Completa los datos para obtener tu estimación.</p>
         </div>
 
-        <!-- Tipo de inmueble -->
-        <div class="field-group">
-          <label class="field-label">Tipo de inmueble</label>
-          <div class="seg-control" role="radiogroup" id="tipo-inmueble">
-            <button class="seg-btn active" data-value="apartamento" role="radio" aria-checked="true">Apartamento</button>
-            <button class="seg-btn" data-value="casa" role="radio" aria-checked="false">Casa</button>
-            <button class="seg-btn" data-value="estudio" role="radio" aria-checked="false">Estudio</button>
+        <!-- Tipo -->
+        <div class="field">
+          <label class="field__label">Tipo de inmueble</label>
+          <div class="seg" id="tipo-inmueble" role="radiogroup">
+            <button class="seg__btn active" data-value="apartamento" role="radio" aria-checked="true">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="6" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="2" width="6" height="15" rx="1" stroke="currentColor" stroke-width="1.5"/><line x1="5" y1="9" x2="7" y2="9" stroke="currentColor" stroke-width="1.5"/><line x1="5" y1="12" x2="7" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="6" x2="15" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="9" x2="15" y2="9" stroke="currentColor" stroke-width="1.5"/><line x1="13" y1="12" x2="15" y2="12" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>Apartamento</span>
+            </button>
+            <button class="seg__btn" data-value="casa" role="radio" aria-checked="false">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9L10 3L18 9V17C18 17.5523 17.5523 18 17 18H3C2.44772 18 2 17.5523 2 17V9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><rect x="8" y="12" width="4" height="6" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>Casa</span>
+            </button>
+            <button class="seg__btn" data-value="estudio" role="radio" aria-checked="false">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="12" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="8" x2="13" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="7" y1="11" x2="10" y2="11" stroke="currentColor" stroke-width="1.5"/></svg>
+              <span>Estudio</span>
+            </button>
           </div>
         </div>
 
         <!-- Municipio -->
-        <div class="field-group">
-          <label class="field-label" for="municipio">Municipio / Zona</label>
-          <select id="municipio" class="field-select">
+        <div class="field">
+          <label class="field__label" for="municipio">Municipio / Zona</label>
+          <select id="municipio" class="select">
             <optgroup label="Zona Sur">
               <option value="sabaneta">Sabaneta</option>
               <option value="envigado">Envigado</option>
@@ -86,166 +119,151 @@
           </select>
         </div>
 
-        <!-- Numeric fields -->
-        <div class="form-grid">
-          <div class="field-group">
-            <label class="field-label" for="area">Área (m²)</label>
-            <input type="number" id="area" class="field-input" value="60" min="1" max="1000" placeholder="60">
+        <!-- Grid -->
+        <div class="field-grid">
+          <div class="field">
+            <label class="field__label" for="area">Área (m²)</label>
+            <input type="number" id="area" class="input" value="60" min="1" max="1000" placeholder="60">
           </div>
-          <div class="field-group">
-            <label class="field-label" for="habitaciones">Habitaciones</label>
-            <input type="number" id="habitaciones" class="field-input" value="2" min="0" max="20" placeholder="2">
+          <div class="field">
+            <label class="field__label" for="habitaciones">Habitaciones</label>
+            <input type="number" id="habitaciones" class="input" value="2" min="0" max="20" placeholder="2">
           </div>
-          <div class="field-group">
-            <label class="field-label" for="banos">Baños</label>
-            <input type="number" id="banos" class="field-input" value="1" min="0" max="10" placeholder="1">
+          <div class="field">
+            <label class="field__label" for="banos">Baños</label>
+            <input type="number" id="banos" class="input" value="1" min="0" max="10" placeholder="1">
           </div>
-          <div class="field-group">
-            <label class="field-label" for="parqueaderos">Parqueaderos</label>
-            <input type="number" id="parqueaderos" class="field-input" value="1" min="0" max="5" placeholder="1">
-          </div>
-        </div>
-
-        <!-- Estrato -->
-        <div class="field-group">
-          <label class="field-label" for="estrato">Estrato socioeconómico</label>
-          <select id="estrato" class="field-select">
-            <option value="1">Estrato 1</option>
-            <option value="2">Estrato 2</option>
-            <option value="3" selected>Estrato 3</option>
-            <option value="4">Estrato 4</option>
-            <option value="5">Estrato 5</option>
-            <option value="6">Estrato 6</option>
-          </select>
-        </div>
-
-        <!-- Antigüedad -->
-        <div class="field-group">
-          <label class="field-label" for="antiguedad">Antigüedad de la edificación</label>
-          <select id="antiguedad" class="field-select">
-            <option value="nueva" selected>Recién construida (0-2 años)</option>
-            <option value="reciente">Reciente (3-10 años)</option>
-            <option value="intermedia">Intermedia (11-20 años)</option>
-            <option value="antigua">Antigua (más de 20 años)</option>
-          </select>
-        </div>
-
-        <!-- Amenities -->
-        <div class="field-group">
-          <label class="field-label">Servicios y amenidades</label>
-          <div class="checkbox-grid">
-            <label class="chip-check">
-              <input type="checkbox" value="ascensor">
-              <span>Ascensor</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="balcon">
-              <span>Balcón</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="terraza">
-              <span>Terraza</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="porteria">
-              <span>Portería 24h</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="gimnasio">
-              <span>Gimnasio</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="piscina">
-              <span>Piscina</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="conjunto-cerrado">
-              <span>Conjunto cerrado</span>
-            </label>
-            <label class="chip-check">
-              <input type="checkbox" value="zonas-sociales">
-              <span>Zonas sociales</span>
-            </label>
+          <div class="field">
+            <label class="field__label" for="parqueaderos">Parqueaderos</label>
+            <input type="number" id="parqueaderos" class="input" value="1" min="0" max="5" placeholder="1">
           </div>
         </div>
 
-        <button class="btn-predict" type="button" id="btn-predict">
-          <span class="btn-text">Calcular estimación</span>
-          <svg class="btn-arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <!-- Estrato + Antigüedad -->
+        <div class="field-grid">
+          <div class="field">
+            <label class="field__label" for="estrato">Estrato</label>
+            <select id="estrato" class="select">
+              <option value="1">Estrato 1</option>
+              <option value="2">Estrato 2</option>
+              <option value="3" selected>Estrato 3</option>
+              <option value="4">Estrato 4</option>
+              <option value="5">Estrato 5</option>
+              <option value="6">Estrato 6</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="antiguedad">Antigüedad</label>
+            <select id="antiguedad" class="select">
+              <option value="nueva" selected>Recién construida</option>
+              <option value="reciente">Reciente (3-10 años)</option>
+              <option value="intermedia">Intermedia (11-20 años)</option>
+              <option value="antigua">Antigua (+20 años)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Amenidades -->
+        <div class="field">
+          <label class="field__label">Amenidades y servicios</label>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" value="ascensor"><span>Ascensor</span></label>
+            <label class="chip"><input type="checkbox" value="balcon"><span>Balcón</span></label>
+            <label class="chip"><input type="checkbox" value="terraza"><span>Terraza</span></label>
+            <label class="chip"><input type="checkbox" value="porteria"><span>Portería 24h</span></label>
+            <label class="chip"><input type="checkbox" value="gimnasio"><span>Gimnasio</span></label>
+            <label class="chip"><input type="checkbox" value="piscina"><span>Piscina</span></label>
+            <label class="chip"><input type="checkbox" value="conjunto-cerrado"><span>Conjunto cerrado</span></label>
+            <label class="chip"><input type="checkbox" value="zonas-sociales"><span>Zonas sociales</span></label>
+          </div>
+        </div>
+
+        <button class="btn-cta" type="button" id="btn-predict">
+          <span>Calcular estimación</span>
+          <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </section>
 
-      <!-- Result Panel -->
-      <section class="panel result-panel" aria-label="Resultado de la predicción" id="result-panel">
-        <div class="panel-header">
-          <h2 class="panel-title">Resultado</h2>
-          <p class="panel-desc">Estimación basada en datos de mercado del Valle de Aburrá.</p>
+      <!-- Result -->
+      <section class="panel panel--result" id="result-panel">
+        <div class="panel__head">
+          <h2 class="panel__title">Resultado</h2>
+          <p class="panel__sub">Estimación de mercado del Valle de Aburrá.</p>
         </div>
 
-        <div class="result-placeholder" id="result-placeholder">
-          <svg class="placeholder-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"/>
-            <path d="M32 18V38M32 38L24 30M32 38L40 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="32" cy="46" r="2.5" fill="currentColor"/>
-          </svg>
-          <p>Completa el formulario y presiona <strong>Calcular estimación</strong></p>
+        <!-- Placeholder -->
+        <div class="placeholder" id="result-placeholder">
+          <div class="placeholder__icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <path d="M24 14V32M24 32L18 26M24 32L30 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>Presiona <strong>Calcular estimación</strong> para ver tu resultado</p>
         </div>
 
-        <div class="result-content hidden" id="result-content">
-          <!-- Price range -->
-          <div class="price-range-card">
-            <p class="price-label">Valor estimado de arriendo mensual</p>
-            <p class="price-main" id="price-main">$0 COP</p>
-            <div class="price-range">
-              <div class="range-item">
-                <span class="range-label">Mínimo</span>
-                <span class="range-value" id="price-min">$0</span>
+        <!-- Content -->
+        <div class="result hidden" id="result-content">
+          <!-- Price card -->
+          <div class="price-card">
+            <div class="price-card__top">
+              <span class="price-card__label">Arriendo mensual estimado</span>
+              <span class="price-card__badge" id="confidence-badge">Confianza media</span>
+            </div>
+            <p class="price-card__value" id="price-main">$0</p>
+            <p class="price-card__unit">COP / mes</p>
+            <div class="price-card__range">
+              <div class="range">
+                <span class="range__label">Mínimo</span>
+                <span class="range__value" id="price-min">$0</span>
               </div>
-              <div class="range-divider"></div>
-              <div class="range-item">
-                <span class="range-label">Máximo</span>
-                <span class="range-value" id="price-max">$0</span>
+              <div class="range__bar">
+                <div class="range__bar-fill" id="range-bar-fill"></div>
+              </div>
+              <div class="range range--right">
+                <span class="range__label">Máximo</span>
+                <span class="range__value" id="price-max">$0</span>
               </div>
             </div>
           </div>
 
-          <!-- Quick stats -->
-          <div class="stats-grid">
-            <div class="stat-tile">
-              <span class="stat-value" id="stat-precio-m2">$0</span>
-              <span class="stat-label">Precio / m²</span>
+          <!-- Stats -->
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__value" id="stat-precio-m2">$0</span>
+              <span class="stat__label">Precio / m²</span>
             </div>
-            <div class="stat-tile">
-              <span class="stat-value" id="stat-tipo">—</span>
-              <span class="stat-label">Tipo</span>
+            <div class="stat">
+              <span class="stat__value" id="stat-tipo">—</span>
+              <span class="stat__label">Tipo</span>
             </div>
-            <div class="stat-tile">
-              <span class="stat-value" id="stat-zona">—</span>
-              <span class="stat-label">Zona</span>
+            <div class="stat">
+              <span class="stat__value" id="stat-zona">—</span>
+              <span class="stat__label">Zona</span>
             </div>
           </div>
 
           <!-- Breakdown -->
-          <div class="breakdown-section">
-            <h3 class="breakdown-title">Desglose de la estimación</h3>
-            <div class="breakdown-list" id="breakdown-list"></div>
+          <div class="breakdown">
+            <h3 class="breakdown__title">Desglose de la estimación</h3>
+            <div class="breakdown__list" id="breakdown-list"></div>
           </div>
 
-          <!-- Disclaimer -->
-          <p class="disclaimer">
-            Esta estimación es una aproximación basada en datos de referencia del mercado.
-            El precio real puede variar según el estado del inmueble, negociación y condiciones del mercado.
-          </p>
+          <!-- Copy button -->
+          <button class="btn-copy" type="button" id="btn-copy">
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="9" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 11V3C3 2.44772 3.44772 2 4 2H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span>Copiar resultado</span>
+          </button>
+
+          <p class="disclaimer">Estimación de referencia basada en datos del mercado. El precio real puede variar según el estado del inmueble, negociación y condiciones del mercado.</p>
         </div>
       </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="app-footer">
-      <p>Predictor de Arriendos · Valle de Aburrá · Datos de referencia de mercado inmobiliario</p>
+    <footer class="footer">
+      <p>Predictor de Arriendos · Valle de Aburrá · Datos de referencia de mercado inmobiliario 2024-2025</p>
     </footer>
 
   </div>
